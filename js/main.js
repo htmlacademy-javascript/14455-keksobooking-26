@@ -8,7 +8,7 @@
 */
 
 const getRandomNumber = (minFirstNumber, maxSecondNumber) => {
-  if (minFirstNumber >= 0 && maxSecondNumber >= 0 && minFirstNumber < maxSecondNumber && !minFirstNumber === maxSecondNumber) {
+  if (minFirstNumber >= 0 && maxSecondNumber >= 0 && minFirstNumber < maxSecondNumber && minFirstNumber !== maxSecondNumber) {
     minFirstNumber = Math.round(minFirstNumber);
     maxSecondNumber =  Math.round(maxSecondNumber);
     return Math.random() * (maxSecondNumber - minFirstNumber) + minFirstNumber;
