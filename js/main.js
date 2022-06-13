@@ -43,18 +43,6 @@ getRandomInteger(22, 33);
 
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
-function getRandomIntegerNumber(firstRangeNumber, lastRangeNumber, floatNumber) {
-  if (firstRangeNumber >= 0 && lastRangeNumber >= 0 && floatNumber >= 0) {
-    return (Math.random() * (firstRangeNumber - lastRangeNumber) + lastRangeNumber).toFixed(floatNumber);
-  } else {
-    throw new Error('Что-то с плавающей запятой у вас не так..., перепроверьте!');
-  }
-}
-getRandomIntegerNumber(12,66,1);
-
-
-// Тот же вариант, но как стрелочная функция
-
 const getRandomIntegerNumber2 = (firstRangeNumber, lastRangeNumber, floatNumber) => {
   if (firstRangeNumber >= 0 && lastRangeNumber >= 0 && floatNumber >= 0) {
     return (Math.random() * (firstRangeNumber - lastRangeNumber) + lastRangeNumber).toFixed(floatNumber);
