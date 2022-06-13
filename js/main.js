@@ -43,11 +43,13 @@ getRandomInteger(22, 33);
 
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
-const getRandomIntegerNumber2 = (firstRangeNumber, lastRangeNumber, floatNumber) => {
+const getRandomIntegerNumber = (firstRangeNumber, lastRangeNumber, floatNumber) => {
   if (firstRangeNumber >= 0 && lastRangeNumber >= 0 && floatNumber >= 0) {
-    return (Math.random() * (firstRangeNumber - lastRangeNumber) + lastRangeNumber).toFixed(floatNumber);
+    firstRangeNumber = Math.ceil(firstRangeNumber);
+    lastRangeNumber = Math.floor(lastRangeNumber);
+    return Number(Math.random() * (firstRangeNumber - lastRangeNumber) + lastRangeNumber).toFixed(floatNumber);
   }
   throw new Error('Что-то с плавающей запятой у вас не так..., перепроверьте!');
 };
 
-getRandomIntegerNumber2(12,66,2);
+getRandomIntegerNumber(12,66,2);
