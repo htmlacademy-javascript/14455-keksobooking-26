@@ -45,8 +45,7 @@ getRandomInteger(22, 33);
 
 const getRandomIntegerNumber = (firstRangeNumber, lastRangeNumber, floatNumber) => {
   if (firstRangeNumber >= 0 && lastRangeNumber >= 0 && floatNumber >= 0) {
-    firstRangeNumber = Math.ceil(firstRangeNumber);
-    lastRangeNumber = Math.floor(lastRangeNumber);
+
     return Number((Math.random() * (firstRangeNumber - lastRangeNumber) + lastRangeNumber).toFixed(floatNumber));
   }
   throw new Error('Что-то с плавающей запятой у вас не так..., перепроверьте!');
